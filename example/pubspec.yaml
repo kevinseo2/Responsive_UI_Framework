@@ -1,0 +1,23 @@
+name: tv_home_example
+description: Example TV Home app using Responsive UI Framework
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '^3.8.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  responsive_ui_framework:
+    path: ..
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
