@@ -117,3 +117,14 @@ For more examples and detailed documentation, visit the [GitHub repository](http
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Changelog
+
+### 0.1.1
+- Improved Resolution Simulator UX:
+  - Overlay panel with scrim and compact panel design.
+  - Fullscreen behavior: entering fullscreen makes the simulated viewport fill the window and overrides MediaQuery so child layouts respond to window resizing; controls automatically hide in fullscreen and reappear when exiting.
+  - Wide aspect ratios (32:9, 24:9, 21:9) now scale down to fit the window or can be scrolled when larger than the viewport.
+  - Compact quick pill at the bottom center for fast previous/next aspect ratio switching.
+
+See `lib/framework/resolution_simulator.dart` and `lib/framework/resolution_simulator_controls.dart` for implementation details.

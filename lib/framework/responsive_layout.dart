@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screen_aspect_ratio.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget child;
@@ -45,19 +46,4 @@ class ResponsiveLayout extends StatelessWidget {
       return aDiff < bDiff ? a : b;
     });
   }
-}
-
-enum ScreenAspectRatio {
-  ratio32x9(32/9),
-  ratio24x9(24/9),
-  ratio21x9(21/9),
-  ratio16x9(16/9),
-  ratio4x3(4/3),
-  ratio1x1(1),
-  ratio3x4(3/4),
-  ratio9x16(9/16),
-  ratio9x21(9/21);
-
-  final double value;
-  const ScreenAspectRatio(this.value);
 }

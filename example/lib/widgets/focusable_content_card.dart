@@ -28,7 +28,7 @@ class _FocusableContentCardState extends State<FocusableContentCard> {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: widget.aspectRatio,
-      child: FocusWrapper(
+      child: Focus(
         onFocusChange: (focused) {
           setState(() {
             _isFocused = focused;
@@ -52,7 +52,7 @@ class _FocusableContentCardState extends State<FocusableContentCard> {
               boxShadow: _isFocused 
                 ? [
                     BoxShadow(
-                      color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                      color: Theme.of(context).colorScheme.primary.withAlpha((0.3 * 255).round()),
                       blurRadius: 8,
                       spreadRadius: 2,
                     )

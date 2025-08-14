@@ -49,7 +49,7 @@ class ContentCard extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withOpacity(0.8),
+                      Color.fromRGBO(0, 0, 0, 0.8),
                     ],
                   ),
                 ),

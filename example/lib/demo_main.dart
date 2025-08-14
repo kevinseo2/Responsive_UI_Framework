@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'framework/resolution_simulator.dart';
-import 'framework/responsive_layout.dart';
+import 'package:responsive_ui_framework/framework/resolution_simulator.dart';
+import 'package:responsive_ui_framework/framework/responsive_layout.dart';
+import 'package:responsive_ui_framework/framework/screen_aspect_ratio.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Responsive UI Framework Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const ResolutionSimulator(
         enabled: kDebugMode, // 디버그 모드에서만 활성화
         child: MyHomePage(title: 'Responsive UI Framework Demo'),
@@ -38,9 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title)),
       body: ResponsiveLayout(
         child: const Center(child: Text('Default Layout')),
         layoutBuilders: {

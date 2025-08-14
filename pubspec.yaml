@@ -1,6 +1,6 @@
 name: responsive_ui_framework
 description: A responsive UI framework for LG webOS applications with support for multiple aspect ratios, focus management, accessibility, and touch input.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/kevinseo2/Responsive_UI_Framework
 
 environment:

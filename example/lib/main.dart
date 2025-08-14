@@ -18,7 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark, // TV apps typically use dark theme
       ),
-      home: const HomeScreen(),
+      home: const ResolutionSimulator(
+        enabled: kDebugMode,
+        showControls: true,
+        showFullscreen: true,
+        child: HomeScreen(),
+      ),
     );
   }
 }
