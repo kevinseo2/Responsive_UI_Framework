@@ -1,29 +1,37 @@
-# LG Responsive UI Framework v2.0
+# LG Responsive UI Framework v2.1
 
-> Design Spec 기반 반응형 UI 프레임워크
+> Figma Design to Code를 위한 반응형 UI 프레임워크
 
-LG Responsive UI Framework v2.0은 새로운 Design Specification에 최적화된 반응형 UI 프레임워크입니다. 화면비 기반 자동 레이아웃 조정과 반응형 UI 시뮬레이터를 제공하여 다양한 디스플레이 환경에서 일관된 사용자 경험을 보장합니다.
+LG Responsive UI Framework v2.1은 Figma 디자인을 Flutter 코드로 자동 변환하기 위한 반응형 UI 프레임워크입니다. Multi-Screen 지원, 화면비 기반 자동 레이아웃 조정, 그리고 반응형 UI 시뮬레이터를 제공하여 다양한 디스플레이 환경에서 일관된 사용자 경험을 보장합니다.
 
 ## 🚀 주요 기능
 
-### ✨ Design Spec 기반 반응형 시스템
-- **10가지 화면비 자동 감지**: 32:9부터 9:21까지 다양한 화면비 지원
-- **자동 레이아웃 조정**: 화면비에 따른 그리드 컬럼 수, 패딩, 간격 자동 조정
-- **플렉스박스 기반 레이아웃**: VERTICAL, HORIZONTAL, GRID, STACK, FLEX 레이아웃 모드
-- **반응형 크기 조정**: FIXED, FILL, FIT_CONTENT, AUTO 크기 조정 모드
+### ✨ Multi-Screen Design Spec 지원
+- **Figma 4가지 레이아웃 모드 완전 지원**: Box, Horizontal, Vertical, Grid
+- **5가지 화면비 자동 감지**: 16:9, 4:3, 1:1, 3:4, 9:16
+- **코딩 스펙 기반 컨테이너**: BoxContainer, HorizontalContainer, VerticalContainer, GridContainer
+- **플레이스홀더 위젯 시스템**: 자동 코드 생성 지원
 
 ### 🎯 반응형 UI 시뮬레이터
-- **실시간 시뮬레이션**: 개발 중 다양한 화면비와 해상도 시뮬레이션
-- **화면비 선택기**: 직관적인 화면비 선택 인터페이스
-- **설정 정보 표시**: 현재 반응형 설정 정보 실시간 표시
+- **실시간 화면비 전환**: 5가지 화면비 (Ultra Wide, Wide, Square, Tall, Ultra Tall)
+- **전체화면 모드**: 시뮬레이션 환경에서 전체화면 테스트
+- **컨트롤 패널**: 우상단 팝업 형태의 직관적인 제어판
 - **핫 리로드 지원**: 개발 중 실시간 변경사항 반영
 
-### 🏗️ 모듈화된 아키텍처
-- **핵심 시스템**: ResponsiveLayoutManager, DynamicLayoutAdapter, ResponsiveLayoutProvider
-- **반응형 위젯**: ResponsiveContainer, AdaptiveGrid, ResponsiveItem 등
-- **화면비 시뮬레이터**: AspectRatioSimulator로 10가지 화면비 실시간 테스트
-- **적응형 안전 영역**: AdaptiveSafeAreaManager로 TV/모바일/데스크톱 최적화
-- **타입 시스템**: AspectRatioCategory, LayoutMode, ResponsiveConfig
+### 🏗️ 코딩 스펙 기반 아키텍처
+- **Design Spec Models**: Figma 디자인 명세를 Flutter 모델로 변환
+- **Layout Calculator**: 화면비와 디바이스에 따른 자동 레이아웃 계산
+- **Adaptive Safe Area**: TV/모바일/데스크톱별 안전 영역 최적화
+- **플레이스홀더 시스템**: 개발 단계별 점진적 구현 지원
+
+## 🎮 데모 앱
+
+실제 작동하는 데모 앱을 통해 프레임워크의 기능을 확인할 수 있습니다:
+
+### ResponsiveUI Multi-Screen Layout App
+- **GitHub**: [responsive_ui_layout_app](https://github.com/kevinseo2/responsive_ui_layout_app)
+- **기능**: Figma JSON 명세 기반 멀티스크린 레이아웃 (Desktop 1920×1080, Tablet 1024×768)
+- **Windows 실행파일**: 빌드된 `.exe` 파일로 바로 테스트 가능
 
 ## 📦 설치
 
@@ -31,7 +39,9 @@ LG Responsive UI Framework v2.0은 새로운 Design Specification에 최적화�
 
 ```yaml
 dependencies:
-  lg_responsive_ui_framework: ^2.0.0
+  lg_responsive_ui_framework:
+    git:
+      url: https://github.com/kevinseo2/Responsive_UI_Framework.git
 ```
 
 ### 패키지 가져오기
