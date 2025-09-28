@@ -1,0 +1,36 @@
+name: lg_responsive_ui_framework
+description: >
+  LG Responsive UI Framework v2.0 - Design Spec 기반 반응형 UI 프레임워크
+  새로운 Design Specification에 최적화된 반응형 레이아웃 시스템을 제공합니다.
+  화면비 기반 자동 레이아웃 조정과 반응형 UI 시뮬레이터를 포함합니다.
+version: 2.0.0
+
+# Package metadata
+homepage: https://github.com/lg-electronics/lg_responsive_ui_framework
+repository: https://github.com/lg-electronics/lg_responsive_ui_framework
+documentation: https://github.com/lg-electronics/lg_responsive_ui_framework/blob/main/README.md
+
+# Package classification
+topics:
+  - responsive
+  - ui-framework
+  - layout
+  - design-spec
+  - flutter
+  - lg-electronics
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
